@@ -100,7 +100,7 @@ xpath_it_ithernet = {
     'Начало карьеры, мало опыта': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[35]/div/div/label/div/div[1]/input',
 }
 
-# IT / Интернет / Телеком
+# Административная работа, секретариат, АХО
 xpath_it_ithernet = {
 
     'Архивное дело': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[1]/div/div/label/div/div[1]/input',
