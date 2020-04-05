@@ -229,6 +229,23 @@ xparh_buhgalteria = {
     'Начало карьеры, мало опыта': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[22]/div/div/label/div/div[1]/input',
 }
 
+# Дизайн
+xparh_design = {
+
+    'Архитектура': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[1]/div/div/label/div/div[1]/input',
+    'Аудио, видео': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[2]/div/div/label/div/div[1]/input',
+    'Верстка, дизайн': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[3]/div/div/label/div/div[1]/input',
+    'Графическое искусство, иллюстрации': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[4]/div/div/label/div/div[1]/input',
+    'Дизайн интерьера': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[5]/div/div/label/div/div[1]/input',
+    'Компьютерная анимация и мультимедиа': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[6]/div/div/label/div/div[1]/input',
+    'Ландшафтный дизайн': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[7]/div/div/label/div/div[1]/input',
+    'Мода и Аксессуары': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[8]/div/div/label/div/div[1]/input',
+    'Промышленный дизайн': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[9]/div/div/label/div/div[1]/input',
+    'Рекламный дизайн': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[10]/div/div/label/div/div[1]/input',
+    'Фотография': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[11]/div/div/label/div/div[1]/input',
+    'Другое': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[12]/div/div/label/div/div[1]/input',
+    'Начало карьеры, мало опыта': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[13]/div/div/label/div/div[1]/input',
+}
 
 ################### считываем данные с excel ################################
 
