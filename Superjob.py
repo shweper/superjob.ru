@@ -335,11 +335,11 @@ time.sleep(4)
 browser.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/label/div/div/input').send_keys(vacancy)
 
 ############## Специализация #################
-
+'''
 browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[2]/div/div[2]/div/div/div[2]/button').click()
 time.sleep(1)
 browser.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[3]/div/button').click()
-
+'''
 
 
 
