@@ -100,20 +100,6 @@ xpath_it_ithernet = {
     'Начало карьеры, мало опыта': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[35]/div/div/label/div/div[1]/input',
 }
 
-# Административная работа, секретариат, АХО
-xpath_it_ithernet = {
-
-    'Архивное дело': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[1]/div/div/label/div/div[1]/input',
-    'АХО': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[2]/div/div/label/div/div[1]/input',
-    'Делопроизводство, ввод данных, систематизация': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[3]/div/div/label/div/div[1]/input',
-    'Диспетчерская служба': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[4]/div/div/label/div/div[1]/input',
-    #
-    'Курьерская служба': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[5]/div/div/label/div/div[1]/input',
-    'Переводы': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[6]/div/div/label/div/div[1]/input',
-    'Секретариат, ресепшн, офис-менеджмент': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[7]/div/div/label/div/div[1]/input',
-    'Другое': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[8]/div/div/label/div/div[1]/input',
-    'Начало карьеры, мало опыта': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[9]/div/div/label/div/div[1]/input',
-}
 
 
 ################### считываем данные с excel ################################
@@ -172,6 +158,69 @@ driver = browser
 
 browser.get('https://nn.superjob.ru/hr/vacancy/create/')
 
+# СЧИТЫВАЕМ ГОРОДА иЗ ЭКСЕЛЯ ДИНАМИЧЕСКИ
+
+sheet = wb[lst[1]]
+sheet.title
+
+barnaul_adr = []
+volgograd_adr = []
+voronej_adr = []
+ekaterenburg_adr = []
+izevsk_adr = []
+irkuts_adr = []
+kazan_adr = []
+kaliningrad_adr = []
+kemerovo_adr = []
+krasnodar_adr = []
+krasnoyars_adr = []
+moskow_adr = []
+naber_cheln_adr = []
+nizniy_novgorod_adr = []
+novosib_adr = []
+omsk_adr = []
+orenburg_adr = []
+perm_adr = []
+rostov_na_dony_adr = []
+ryazan_adr = []
+samara_adr = []
+sankt_peter_adr = []
+saratov_adr = []
+sochi_and_adler = []
+toliatty_adr = []
+tomsk_adr = []
+tyla_adr = []
+tumen_adr = []
+ufa_adr = []
+chelabinsk_adr = []
+yaroslavl_adr = []
+musor_exela = []
+#goroda_arr = [musor_exela, barnaul_adr, volgograd_adr, voronej_adr, ekaterenburg_adr, izevsk_adr, irkuts_adr, kazan_adr, kaliningrad_adr, kemerovo_adr, krasnodar_adr, krasnoyars_adr, moskow_adr, naber_cheln_adr, nizniy_novgorod_adr, novosib_adr, omsk_adr, orenburg_adr, perm_adr, rostov_na_dony_adr, ryazan_adr, samara_adr, sankt_peter_adr, saratov_adr, sochi_and_adler, toliatty_adr, tomsk_adr, tyla_adr, tumen_adr, ufa_adr, chelabinsk_adr, yaroslavl_adr]
+goroda_arr = []
+
+kolichestvo_gorodov = 0
+
+for cell in sheet['A']:
+    kolichestvo_gorodov += 1
+    print(cell.value)
+
+for number_gorod in range(kolichestvo_gorodov):
+    goroda_arr.append([])
+    for cell in list(sheet.rows)[number_gorod]:
+         if cell.value != None:
+            goroda_arr[number_gorod].append(cell.value)
+
+kolichestvo_adresov = []
+high_number_gorod = 0
+number_goroda = 0
+while number_goroda < len(goroda_arr):
+    max_number = len(goroda_arr[number_goroda])
+    kolichestvo_adresov.append(len(goroda_arr[number_goroda]))
+    if high_number_gorod< max_number:
+        high_number_gorod = max_number
+        number_goroda = number_goroda + 1
+    else:
+        number_goroda = number_goroda + 1
 ############### Login ########################
 
 browser.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/form/div/div[3]/div/div/div/div/div[1]/label/div/div/input').send_keys(login)
@@ -184,14 +233,14 @@ time.sleep(4)
 browser.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/label/div/div/input').send_keys(vacancy)
 
 ############## Специализация #################
-
+''''
 browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[2]/div/div[2]/div/div/div[2]/button/span/span/span').click()
 time.sleep(1)
 browser.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[3]/div/button').click()
-
-
+'''
 
 ############## Город #########################
+'''
 p = 1
 while p <= 7:
     try:
@@ -203,14 +252,14 @@ gorod = "Тула"
 browser.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[4]/div/div[1]/div/div/div[3]/div/div[1]/label/div/div/input').send_keys(gorod)
 time.sleep(1)
 browser.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[4]/div/div[1]/div/div/div[3]/div/div[1]/label/div/div/input').send_keys(Keys.ARROW_DOWN + Keys.ENTER)
-
+'''
 ############## Адрес ########################
-
+'''
 adres = "ул. Ленина"
 browser.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[4]/div/div[2]/div/div/div/div[2]/div/div[1]/div/div[1]/label/div/div/input').send_keys(gorod + ' ' + adres)
 time.sleep(1)
 browser.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[4]/div/div[2]/div/div/div/div[2]/div/div[1]/div/div[1]/label/div/div/input').send_keys(Keys.ARROW_DOWN + Keys.ENTER)
-
+'''
 ############# Метро ########################
 
 
@@ -218,12 +267,11 @@ browser.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/
 ############# Занятость #################### НУЖНО СДЕЛАТЬ
 
 browser.find_element_by_xpath('//*[@id="detailInfo.workType.id-input"]').click()
-browser.find_element_by_xpath('//*[@id="detailInfo.workType.id-input"]').send_keys(Keys.ARROW_DOWN + Keys.ARROW_DOWN + Keys.ENTER)
-
+browser.find_element_by_xpath('//*[@id="detailInfo.workType.id-input"]').send_keys('Не' + Keys.ENTER)
 ############# Уровень дохода ###############
 
-browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[6]/div/div[2]/div[1]/div/div[1]/div/div/div[2]/div/div[1]/label/div/div[2]/input').send_keys(zp_ot)
-browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[6]/div/div[2]/div[1]/div/div[1]/div/div/div[2]/div/div[2]/label/div/div[2]/input').send_keys(zp_do)
+browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[7]/div/div[2]/div[1]/div/div[1]/div/div/div[2]/div/div[1]/label/div/div[2]/input').send_keys(zp_ot)
+browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[7]/div/div[2]/div[1]/div/div[1]/div/div/div[2]/div/div[2]/label/div/div[2]/input').send_keys(zp_do)
 
 ############ Опыт работы ###################
 try:
@@ -261,11 +309,12 @@ treb0 = lst_trebovania[0].split('\n', 1)
 #iframe = browser.find_elements_by_xpath('//*[@id="description_ifr"]')[0]
 #driver.switch_to.default_content()
 #driver.switch_to.frame(iframe)
+browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[10]/div/div/div[2]/div/div[1]/div/div/div/div[2]/ul[1]/li[2]').send_keys(Keys.LEFT_CONTROL + 'A' + Keys.BACKSPACE)
 
 div = browser.find_elements_by_tag_name('p')[0]
 print("YSLOVIE!!!!!!!!!!!!!\n", yslovia, "\n", yslovia[0])
 div.send_keys(Keys.ARROW_UP + Keys.ENTER)
-div1 = browser.find_elements_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[9]/div/div/div[2]/div/div[1]/div/div/div/div[2]')[0]
+div1 = browser.find_elements_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[10]/div/div/div[2]/div/div[1]/div/div/div/div[2]')[0]
 div1.send_keys(" " + (Keys.LEFT_CONTROL + "b"))
 div1.send_keys(yslovia[0])
 browser.find_elements_by_tag_name('strong')[0].send_keys(Keys.ENTER)
@@ -296,6 +345,15 @@ lastp.send_keys(Keys.LEFT_CONTROL + "b" + tr21)
 lastp.send_keys(' ' + Keys.LEFT_CONTROL + "b")
 lastp.send_keys(tr22)
 
+#Заполняем города
+#ля теста iter_gorod
+iter_gorod = 1
+adr_bar = browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[4]/div/div[1]/div/div/div[3]/div/div[1]/label/div/div/input')
+random_adres = random.randint(1, kolichestvo_adresov[iter_gorod]-1)
+print('random adres = ', random_adres)
+adr_bar.send_keys(goroda_arr[iter_gorod][0])
+adr_bar = browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[4]/div/div[2]/div/div/div/div[2]/div/div[1]/div/div[1]/label/div/div/input')
+adr_bar.send_keys(goroda_arr[iter_gorod][random_adres])
 # print(tr22)
 # obz.send_keys(tr22)
 # obz.send_keys(Keys.ENTER + Keys.ENTER + tr2)
