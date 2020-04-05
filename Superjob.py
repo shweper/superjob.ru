@@ -571,22 +571,29 @@ while n < 5:
     companys = [company, company1, company2, company3, company4]
     opis_companys = [opis_company, opis_company1, opis_company2, opis_company3, opis_company4]
     iter_companys = 0 #Для теста пока без цикла, потом добавить как в работару
-
+    print(companys)
+    print(opis_companys)
     browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[2]/div/div[2]/div/div/div/button').click()
     try:
         browser.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[3]/div/button/span/span/span').click()
     except:
         print('чисто')
-    rubrika = xpath_rubriks.get(companys[iter_companys])
-    print(company)
-    print(rubrika)
-    browser.find_element_by_xpath(rubrika).click()
-    xpartt = vibor_podrubrik.get(company)
-    print(xpartt)
-    xpartt2 = xpartt.get(opis_company)
-    print(xpartt2)
-    browser.find_element_by_xpath(xpartt2).click()
-    browser.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[3]/div/div/div[1]/button/span/span/span').click()
+    time.sleep(1)
+    while iter_companys < 5:
+        if iter_companys != 0:
+            browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[2]/div/div[2]/div/div/div/button').click()
+        rubrika = xpath_rubriks.get(companys[iter_companys])
+        browser.find_element_by_xpath(rubrika).click()
+        time.sleep(1)
+        xpartt = vibor_podrubrik.get(companys[iter_companys])
+        xpartt2 = xpartt.get(opis_companys[iter_companys])
+        browser.find_element_by_xpath(xpartt2).click()
+        time.sleep(1)
+        browser.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[3]/div/div/div[1]/button/span/span/span').click()
+        time.sleep(1)
+
+        iter_companys+=1
+
     ############# Занятость #################### НУЖНО СДЕЛАТЬ
 
     browser.find_element_by_xpath('//*[@id="detailInfo.workType.id-input"]').click()
