@@ -343,10 +343,11 @@ browser.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[2]/div/div/d
 
 
 
-############# Занятость #################### НУЖНО СДЕЛАТЬ
+############# Занятость ####################
 
 browser.find_element_by_xpath('//*[@id="detailInfo.workType.id-input"]').click()
 browser.find_element_by_xpath('//*[@id="detailInfo.workType.id-input"]').send_keys(grafik + Keys.ENTER)
+
 ############# Уровень дохода ###############
 
 browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[7]/div/div[2]/div[1]/div/div[1]/div/div/div[2]/div/div[1]/label/div/div[2]/input').send_keys(zp_ot)
