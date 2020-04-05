@@ -335,8 +335,8 @@ time.sleep(4)
 browser.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/label/div/div/input').send_keys(vacancy)
 
 ############## Специализация #################
-''''
-browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[2]/div/div[2]/div/div/div[2]/button/span/span/span').click()
+'''
+browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[2]/div/div[2]/div/div/div[2]/button').click()
 time.sleep(1)
 browser.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[3]/div/button').click()
 '''
@@ -416,7 +416,7 @@ print(frag_opisanie)
 frag_opisanie = opisanie.partition('\n \n')
 podval = frag_opisanie[2]
 
-
+#Заполняем описание
 linii = browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[10]/div/div/div[2]/div/div[1]/div/div/div/div[2]')
 linii.find_element_by_tag_name('b').send_keys(Keys.ARROW_UP + Keys.ENTER)
 lst_linii = linii.find_elements_by_tag_name('li')
@@ -426,39 +426,7 @@ lst_linii[2].send_keys(trebovania + Keys.DELETE)
 lst_linii[4].send_keys(yslovia + Keys.BACKSPACE + Keys.DELETE)
 linii.send_keys('\n\n' + Keys.LEFT_CONTROL + 'b' + Keys.LEFT_CONTROL + podval)
 
-div = browser.find_elements_by_tag_name('p')[0]
-print("YSLOVIE!!!!!!!!!!!!!\n", yslovia, "\n", yslovia[0])
-div.send_keys(Keys.ARROW_UP + Keys.ENTER)
-div1 = browser.find_elements_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[10]/div/div/div[2]/div/div[1]/div/div/div/div[2]')[0]
-div1.send_keys(" " + (Keys.LEFT_CONTROL + "b"))
-div1.send_keys(yslovia[0])
-browser.find_elements_by_tag_name('strong')[0].send_keys(Keys.ENTER)
-ysl = browser.find_elements_by_tag_name('ul')[0]
-print(lst_obiaznosti)
-print(lst_obiaznosti[0])
-print(lstobi)
-ysl.send_keys(treb0)  # То что после ОБЯЗАННОСТИ
-ysl.send_keys(Keys.BACKSPACE)
-trb = browser.find_elements_by_tag_name('ul')[1]
 
-tr = lst_treb[1].split("\n \n", 1)
-tr1 = tr[0]
-tr2 = tr[1]
-trb.send_keys(tr1)  # То что после ТРЕБОВАНИЯ
-obz = browser.find_elements_by_tag_name('ul')[2]
-obz.send_keys(lstobi)  # То что после УСЛОВИЯ
-obz.send_keys(Keys.BACKSPACE)
-trsplit = tr2.split(' ', 2)
-tr21 = trsplit[0] + ' ' + trsplit[1]
-tr22 = trsplit[2]
-obz.send_keys(Keys.ENTER + Keys.ENTER)
-lastp = browser.find_elements_by_tag_name('p')[-1]
-lastp.send_keys(Keys.LEFT_CONTROL + "b" + tr21)
-# print(tr21)
-# print(tr22)
-# obz.send_keys(tr21)
-lastp.send_keys(' ' + Keys.LEFT_CONTROL + "b")
-lastp.send_keys(tr22)
 
 #Заполняем города
 #ля теста iter_gorod
