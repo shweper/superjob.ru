@@ -137,7 +137,6 @@ xpath_logistika = {
 }
 
 # Банки, инвестиции, лизинг
-
 xpath_banki_invest = {
 
     'Банковская бухгалтерия': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[1]/div/div/label/div/div[1]/input',
@@ -202,6 +201,33 @@ xpath_ohrana= {
     'Другое': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[13]/div/div/label/div/div[1]/input',
     'Начало карьеры, мало опыта': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[14]/div/div/label/div/div[1]/input',
     }
+
+# Бухгалтерия, финансы, аудит
+xparh_buhgalteria = {
+
+    'GAAP': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[1]/div/div/label/div/div[1]/input',
+    'Аудит, ревизия, инспектирование': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[2]/div/div/label/div/div[1]/input',
+    'Бухгалтерский учет': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[3]/div/div/label/div/div[1]/input',
+    'Бюджетирование и планирование': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[4]/div/div/label/div/div[1]/input',
+    'Казначейство': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[5]/div/div/label/div/div[1]/input',
+    'Кассовые операции': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[6]/div/div/label/div/div[1]/input',
+    'Кредитный контроль': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[7]/div/div/label/div/div[1]/input',
+    'МСФО, IFRS, РСБУ': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[8]/div/div/label/div/div[1]/input',
+    'Налоги': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[9]/div/div/label/div/div[1]/input',
+    'Основные средства': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[10]/div/div/label/div/div[1]/input',
+    'Первичная документация': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[11]/div/div/label/div/div[1]/input',
+    'Планово-экономическое управление': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[12]/div/div/label/div/div[1]/input',
+    'Расчет себестоимости': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[13]/div/div/label/div/div[1]/input',
+    'Учет заработной платы': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[14]/div/div/label/div/div[1]/input',
+    'Учет счетов и платежей': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[15]/div/div/label/div/div[1]/input',
+    'Учет труда и социальных выплат сотрудникам': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[16]/div/div/label/div/div[1]/input',
+    'Учет фондов': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[17]/div/div/label/div/div[1]/input',
+    'Финансовый анализ и контроль': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[18]/div/div/label/div/div[1]/input',
+    'Финансовый менеджмент': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[19]/div/div/label/div/div[1]/input',
+    'Экономический анализ': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[20]/div/div/label/div/div[1]/input',
+    'Другое': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[21]/div/div/label/div/div[1]/input',
+    'Начало карьеры, мало опыта': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[22]/div/div/label/div/div[1]/input',
+}
 
 
 ################### считываем данные с excel ################################
