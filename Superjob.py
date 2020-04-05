@@ -100,6 +100,108 @@ xpath_it_ithernet = {
     'Начало карьеры, мало опыта': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[35]/div/div/label/div/div[1]/input',
 }
 
+# Административная работа, секретариат, АХО
+xpath_it_adm_personal = {
+
+    'Архивное дело': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[1]/div/div/label/div/div[1]/input',
+    'АХО': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[2]/div/div/label/div/div[1]/input',
+    'Делопроизводство, ввод данных, систематизация': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[3]/div/div/label/div/div[1]/input',
+    'Диспетчерская служба': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[4]/div/div/label/div/div[1]/input',
+    #
+    'Курьерская служба': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[5]/div/div/label/div/div[1]/input',
+    'Переводы': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[6]/div/div/label/div/div[1]/input',
+    'Секретариат, ресепшн, офис-менеджмент': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[7]/div/div/label/div/div[1]/input',
+    'Другое': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[8]/div/div/label/div/div[1]/input',
+    'Начало карьеры, мало опыта': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[9]/div/div/label/div/div[1]/input',
+}
+
+# Транспорт, логистика, ВЭД
+xpath_logistika = {
+    'Авиаперевозки': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[1]/div/div/label/div/div[1]/input',
+    'Автоперевозки': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[2]/div/div/label/div/div[1]/input',
+    'ВЭД': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[3]/div/div/label/div/div[1]/input',
+
+    'Железнодорожные перевозки': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[4]/div/div/label/div/div[1]/input',
+    'Контейнерные перевозки': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[5]/div/div/label/div/div[1]/input',
+
+    'Логистика': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[6]/div/div/label/div/div[1]/input',
+    'Метрополитен': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[7]/div/div/label/div/div[1]/input',
+
+    'Морские, речные перевозки': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[8]/div/div/label/div/div[1]/input',
+    'Складское хозяйство': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[9]/div/div/label/div/div[1]/input',
+    'Таможня': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[10]/div/div/label/div/div[1]/input',
+    'Трубопроводы': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[11]/div/div/label/div/div[1]/input',
+
+    'Другое': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[12]/div/div/label/div/div[1]/input',
+    'Начало карьеры, мало опыта': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[13]/div/div/label/div/div[1]/input',
+}
+
+# Банки, инвестиции, лизинг
+
+xpath_banki_invest = {
+
+    'Банковская бухгалтерия': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[1]/div/div/label/div/div[1]/input',
+    'Бэк-Офис': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[2]/div/div/label/div/div[1]/input',
+    'Бюджетирование и планирование': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[3]/div/div/label/div/div[1]/input',
+    'Валютные операции': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[4]/div/div/label/div/div[1]/input',
+    #
+    'Вклады': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[5]/div/div/label/div/div[1]/input',
+    'Депозитарий': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[6]/div/div/label/div/div[1]/input',
+    'Документарные операции': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[7]/div/div/label/div/div[1]/input',
+    'Залоги и проблемная задолженность': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[8]/div/div/label/div/div[1]/input',
+    #
+    'Ипотека': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[9]/div/div/label/div/div[1]/input',
+    'Кредитование физических лиц': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[10]/div/div/label/div/div[1]/input',
+    'Кредитование юридических лиц': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[11]/div/div/label/div/div[1]/input',
+    #
+    'Лизинг': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[12]/div/div/label/div/div[1]/input',
+    'Методология, разработка и продажа корпоративных продуктов': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[13]/div/div/label/div/div[1]/input',
+    #
+    'Методология, разработка и продажа продуктов Private Banking': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[14]/div/div/label/div/div[1]/input',
+    'Методология, разработка и продажа розничных продуктов': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[15]/div/div/label/div/div[1]/input',
+    'Налоговый учёт': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[16]/div/div/label/div/div[1]/input',
+    'Обслуживание банкоматов': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[17]/div/div/label/div/div[1]/input',
+    'Пластиковые карты (эквайринг)': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[18]/div/div/label/div/div[1]/input',
+    #
+    'Продажа банковских продуктов': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[19]/div/div/label/div/div[1]/input',
+    'Разработка банковских продуктов': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[20]/div/div/label/div/div[1]/input',
+    'Расчёты и обработка платежей, касса': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[21]/div/div/label/div/div[1]/input',
+    #
+    'Риски': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[22]/div/div/label/div/div[1]/input',
+    'Торговое финансирование': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[23]/div/div/label/div/div[1]/input',
+    'Управление активами': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[24]/div/div/label/div/div[1]/input',
+    #
+    'Управление ликвидностью и балансовыми рисками': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[25]/div/div/label/div/div[1]/input',
+    'Управленческая отчетность': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[26]/div/div/label/div/div[1]/input',
+    'Финансовая отчётность': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[27]/div/div/label/div/div[1]/input',
+    'Финансовый анализ и контроль': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[28]/div/div/label/div/div[1]/input',
+    #
+    'Ценные бумаги': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[29]/div/div/label/div/div[1]/input',
+    'Другое': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[30]/div/div/label/div/div[1]/input',
+    'Начало карьеры, мало опыта': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[31]/div/div/label/div/div[1]/input',
+}
+
+# Безопасность, службы охраны
+xpath_ohrana= {
+    'Видеонаблюдение': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[1]/div/div/label/div/div[1]/input',
+    'Имущественная безопасность': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[2]/div/div/label/div/div[1]/input',
+    'Инкассация': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[3]/div/div/label/div/div[1]/input',
+
+    'Информационная безопасность': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[4]/div/div/label/div/div[1]/input',
+    'Кинология': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[5]/div/div/label/div/div[1]/input',
+
+    'Личная безопасность': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[6]/div/div/label/div/div[1]/input',
+    'Охранно-, детективная деятельность': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[7]/div/div/label/div/div[1]/input',
+
+    'Охранные службы предприятий': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[8]/div/div/label/div/div[1]/input',
+    'Пожарная безопасность': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[9]/div/div/label/div/div[1]/input',
+    'Служба спасения': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[10]/div/div/label/div/div[1]/input',
+    'ЧОП': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[11]/div/div/label/div/div[1]/input',
+
+    'Экономическая безопасность': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[12]/div/div/label/div/div[1]/input',
+    'Другое': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[13]/div/div/label/div/div[1]/input',
+    'Начало карьеры, мало опыта': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[14]/div/div/label/div/div[1]/input',
+    }
 
 
 ################### считываем данные с excel ################################
@@ -239,35 +341,12 @@ time.sleep(1)
 browser.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[3]/div/button').click()
 '''
 
-############## Город #########################
-'''
-p = 1
-while p <= 7:
-    try:
-        browser.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[4]/div/div[1]/div/div/div[2]/ul/li['+str(p)+']/span/span[2]/button').click()
-    except:
-        print("Больше нет автоматически подставленых городов")
-    p+=1
-gorod = "Тула"
-browser.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[4]/div/div[1]/div/div/div[3]/div/div[1]/label/div/div/input').send_keys(gorod)
-time.sleep(1)
-browser.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[4]/div/div[1]/div/div/div[3]/div/div[1]/label/div/div/input').send_keys(Keys.ARROW_DOWN + Keys.ENTER)
-'''
-############## Адрес ########################
-'''
-adres = "ул. Ленина"
-browser.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[4]/div/div[2]/div/div/div/div[2]/div/div[1]/div/div[1]/label/div/div/input').send_keys(gorod + ' ' + adres)
-time.sleep(1)
-browser.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[4]/div/div[2]/div/div/div/div[2]/div/div[1]/div/div[1]/label/div/div/input').send_keys(Keys.ARROW_DOWN + Keys.ENTER)
-'''
-############# Метро ########################
-
 
 
 ############# Занятость #################### НУЖНО СДЕЛАТЬ
 
 browser.find_element_by_xpath('//*[@id="detailInfo.workType.id-input"]').click()
-browser.find_element_by_xpath('//*[@id="detailInfo.workType.id-input"]').send_keys('Не' + Keys.ENTER)
+browser.find_element_by_xpath('//*[@id="detailInfo.workType.id-input"]').send_keys(grafik + Keys.ENTER)
 ############# Уровень дохода ###############
 
 browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[7]/div/div[2]/div[1]/div/div[1]/div/div/div[2]/div/div[1]/label/div/div[2]/input').send_keys(zp_ot)
@@ -289,7 +368,7 @@ except:
     print('Выбраный опыт работы уже стоит')
 
 ############ Описание вакансии #############
-
+'''
 yslovia = opisanie.partition('Условия:')
 # print(x[1])
 obiaznosti = yslovia[2].partition('Обязанности:')
@@ -300,16 +379,52 @@ del lstobi[0]
 
 trebovania = obiaznosti[2].partition('Требования:')
 lst_trebovania = list(trebovania)
-lst_treb = lst_trebovania[2].split('\n', 1)
+lst_treb = lst_trebovania[1].split('\n', 1)
 # print(obiaznosti[0], trebovania[0], trebovania[2])
-print(lst_trebovania)
+print(lst_treb)
+print(obiaznosti) #условия
+print(yslovia) #
 treb0 = lst_trebovania[0].split('\n', 1)
-# del treb0[0]
+'''
+#Вытаскиваем Условия
+frag_opisanie = opisanie.partition('Условия:')
+frag_opisanie = frag_opisanie[2].partition('Обязанности:')
+frag_opisanie = frag_opisanie[0].split('\n', 1)
+del frag_opisanie[0]
+yslovia = frag_opisanie[0]
 
-#iframe = browser.find_elements_by_xpath('//*[@id="description_ifr"]')[0]
-#driver.switch_to.default_content()
-#driver.switch_to.frame(iframe)
-browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[10]/div/div/div[2]/div/div[1]/div/div/div/div[2]/ul[1]/li[2]').send_keys(Keys.LEFT_CONTROL + 'A' + Keys.BACKSPACE)
+#Вытаскиваем Обязанности
+frag_opisanie = opisanie.partition('Обязанности:')
+frag_opisanie = frag_opisanie[2].partition('Требования:')
+frag_opisanie = frag_opisanie[0].split('\n', 1)
+del frag_opisanie[0]
+obiaznosti = frag_opisanie[0]
+
+#Вытаскиваем Требования
+frag_opisanie = opisanie.partition('Требования:')
+frag_opisanie = frag_opisanie[2].partition('\n \n')
+frag_opisanie = frag_opisanie[0].split('\n', 1)
+del frag_opisanie[0]
+trebovania = frag_opisanie[0]
+
+#Вытаскиваем шапку
+frag_opisanie = opisanie.partition('Условия:')
+shapka = frag_opisanie[0]
+print(frag_opisanie)
+
+#Вытаскиваем подвал
+frag_opisanie = opisanie.partition('\n \n')
+podval = frag_opisanie[2]
+
+
+linii = browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[10]/div/div/div[2]/div/div[1]/div/div/div/div[2]')
+linii.find_element_by_tag_name('b').send_keys(Keys.ARROW_UP + Keys.ENTER)
+lst_linii = linii.find_elements_by_tag_name('li')
+linii.find_element_by_tag_name('p').send_keys(Keys.LEFT_CONTROL + 'b' + Keys.LEFT_CONTROL + (shapka + Keys.BACKSPACE))
+lst_linii[0].send_keys(obiaznosti + Keys.BACKSPACE + Keys.DELETE)
+lst_linii[2].send_keys(trebovania + Keys.DELETE)
+lst_linii[4].send_keys(yslovia + Keys.BACKSPACE + Keys.DELETE)
+linii.send_keys('\n\n' + Keys.LEFT_CONTROL + 'b' + Keys.LEFT_CONTROL + podval)
 
 div = browser.find_elements_by_tag_name('p')[0]
 print("YSLOVIE!!!!!!!!!!!!!\n", yslovia, "\n", yslovia[0])
