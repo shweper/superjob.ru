@@ -470,8 +470,11 @@ company3 = (sheet.cell(row=i, column=13).value)
 opis_company3 = (sheet.cell(row=i, column=14).value)
 company4 = (sheet.cell(row=i, column=15).value)
 opis_company4 = (sheet.cell(row=i, column=16).value)
-nazvanie = (sheet.cell(row=i, column=17).value)
-auto = (sheet.cell(row=i, column=18).value)
+sfera_deyatel = (sheet.cell(row=i, column=17).value)
+opis_deyatel = (sheet.cell(row=i, column=18).value)
+name_company = (sheet.cell(row=i, column=19).value)
+opis_deyatel_rename_company = (sheet.cell(row=i, column=20).value)
+
 # print(vacancy)
 error_string = 1099
 # СЧИТЫВАЕМ ГОРОДА иЗ ЭКСЕЛЯ ДИНАМИЧЕСКИ
@@ -679,7 +682,34 @@ while n < 5:
     adr_bar.send_keys(goroda_arr[iter_gorod][random_adres])
     time.sleep(2)
     adr_bar.send_keys(Keys.ARROW_DOWN + Keys.ENTER)
-    time.sleep(1)
+
+    ############## Информация о компании ###################################
+
+    if sfera_deyatel != None:
+        try:
+            browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[3]/div/div/div[2]/div/div[3]/label/div/div[1]/span').click()
+            browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[3]/div/div/div[2]/div/div[3]/div/div[2]/button').click()
+            time.sleep(1)
+            browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[3]/div/div/div[2]/div/div[3]/div/div[1]/div/label/div/div/input').send_keys(sfera_deyatel)
+            browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[3]/div/div/div[2]/div/div[3]/div/div[2]/div/label/div/div/textarea').send_keys(opis_deyatel)
+            browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[3]/div/div/div[2]/div/div[3]/div/div[3]/div/div[1]/button').click()
+        except:
+            print("Скрыть информацию не получилось")
+    elif name_company != None
+        try:
+            browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[3]/div/div/div[2]/div/div[1]/div/div[2]/button').click()
+            time.sleep(1)
+            browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[3]/div/div/div[2]/div/div[1]/div/div[1]/div/label/div/div/input').send_keys(name_company)
+            browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[3]/div/div/div[2]/div/div[1]/div/div[2]/div/label/div/div/textarea').send_keys(opis_deyatel_rename_company)
+            browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[3]/div/div/div[2]/div/div[1]/div/div[3]/div/div[1]/button').click()
+        except:
+            print("Отредактировать информацию не получилось")
+    else:
+        print("Оставляем название компании ткаим какое оно есть")
+
+
+    ############## Размещаем вакансию и закрываем браузер ##################
+    time.sleep(1000)
     browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[6]/div/div[2]/div/div[1]/div/div[1]/button/span/span/span').click()
     time.sleep(1)
     browser.quit()
