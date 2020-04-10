@@ -411,6 +411,24 @@ xparh_obrazovanie = {
     'Начало карьеры, мало опыта': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[13]/div/div/label/div/div[1]/span',
 }
 
+# Некомерческие организации волонтёрство
+xparh_volonter = {
+
+    'Академия наук': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[1]/div/div/label/div/div[1]/span',
+    'Бизнес-образование': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[2]/div/div/label/div/div[1]/span',
+    'Внешкольное образование': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[3]/div/div/label/div/div[1]/span',
+    'Высшее образование': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[4]/div/div/label/div/div[1]/span',
+    'Дошкольное воспитание и образование': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[5]/div/div/label/div/div[1]/span',
+}
+
+# Рабочий персонал
+xparh_rab_pers = {
+
+    'Бригада': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[1]/div/div/label/div/div[1]/span',
+    'Квалифицированный рабочий': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[2]/div/div/label/div/div[1]/span',
+    'Рабочий персонал, разное': '/html/body/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div/div[3]/ul/li[3]/div/div/label/div/div[1]/span',
+}
+
 vibor_podrubrik = {
     'IT, Интернет, связь, телеком' : xpath_it_ithernet,
     'Административная работа, секретариат, АХО' : xpath_it_adm_personal,
@@ -426,8 +444,8 @@ vibor_podrubrik = {
     'Консалтинг, стратегическое развитие' : xparh_konsalting,
     'Маркетинг, реклама, PR' : xparh_marketing,
     'Медицина,  фармацевтика, ветеринария' : xparh_medicina,
-    'Наука, образование, повышение квалификации' : xparh_obrazovanie
-
+    'Наука, образование, повышение квалификации' : xparh_obrazovanie,
+    'Некоммерческие организации, волонтерство': xparh_volonter
     }
 
 ################### считываем данные с excel ################################
