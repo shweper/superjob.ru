@@ -695,7 +695,7 @@ while n < 5:
             browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[3]/div/div/div[2]/div/div[3]/div/div[3]/div/div[1]/button').click()
         except:
             print("Скрыть информацию не получилось")
-    elif name_company != None
+    elif name_company != None:
         try:
             browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[3]/div/div/div[2]/div/div[1]/div/div[2]/button').click()
             time.sleep(1)
