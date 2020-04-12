@@ -563,7 +563,7 @@ while number_goroda < len(goroda_arr):
 ###############    autorith  ###############
 
 n = 0
-while n < 5:
+while n < 150:
     sheet = wb[lst[2]]
     sheet.title
     login = (sheet.cell(row=1, column=2).value)
@@ -728,7 +728,7 @@ while n < 5:
 
 
     ############## Размещаем вакансию и закрываем браузер ##################
-    time.sleep(1000)
+    time.sleep(1)
     browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[6]/div/div[2]/div/div[1]/div/div[1]/button/span/span/span').click()
     time.sleep(1)
     browser.quit()
