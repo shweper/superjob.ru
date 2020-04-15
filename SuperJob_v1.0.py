@@ -1023,6 +1023,8 @@ while n < 150:
     print(col_metro)
     metro = random.randint(0, col_metro)
     spisoc_metro[metro].click()
+    time.sleep(1)
+    browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[3]/div/button').click()
     ############## Информация о компании ###################################
 
     if sfera_deyatel != None:
