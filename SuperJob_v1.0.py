@@ -1012,6 +1012,17 @@ while n < 150:
     time.sleep(2)
     adr_bar.send_keys(Keys.ARROW_DOWN + Keys.ENTER)
 
+    #########Добавляем метро
+    time.sleep(2)
+    browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[5]/div/div/div/button/span/span/span').click()
+    time.sleep(2)
+    list_metro = browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[2]')
+    spisoc_metro = list_metro.find_elements_by_tag_name('span')
+    print(spisoc_metro)
+    col_metro = len(spisoc_metro) - 1
+    print(col_metro)
+    metro = random.randint(0, col_metro)
+    spisoc_metro[metro].click()
     ############## Информация о компании ###################################
 
     if sfera_deyatel != None:
