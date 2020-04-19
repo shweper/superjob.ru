@@ -1014,24 +1014,29 @@ while n < 1500:
 
     #########Добавляем метро
     try:
-        browser.find_element_by_xpath(
-            '/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[5]/div/div/div/button/span/span/span').click()
-        time.sleep(2)
-        list_metro = browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[2]')
-        spisoc_metro = list_metro.find_elements_by_class_name('_2s93E')
+        try:
+            browser.find_element_by_xpath(
+                '/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[5]/div/div/div/button/span/span/span').click()
+            time.sleep(2)
+            list_metro = browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[2]')
+            spisoc_metro = list_metro.find_elements_by_class_name('_2s93E')
 
-        metro = len(spisoc_metro) - 1
-        array_metro = list(range(0, metro))
-        random.shuffle(array_metro)
-        iter_metro = 0
-        while iter_metro < 10:
-            iter_iter_metro = array_metro[iter_metro]
-            spisoc_metro[iter_iter_metro].click()
-            time.sleep(1)
-            iter_metro += 1
-        browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[3]/div/button').click()
+            metro = len(spisoc_metro) - 1
+            array_metro = list(range(0, metro))
+            random.shuffle(array_metro)
+            iter_metro = 0
+            while iter_metro < 10:
+                iter_iter_metro = array_metro[iter_metro]
+                spisoc_metro[iter_iter_metro].click()
+                time.sleep(1)
+                iter_metro += 1
+            browser.find_element_by_xpath(
+                '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[3]/div/button').click()
+        except:
+            browser.find_element_by_xpath(
+                '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[3]/div/button').click()
     except:
-        browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[3]/div/button').click()
+        print("Нет возможности добавить метро")
     ############## Информация о компании ###################################
 
     if sfera_deyatel != None:
