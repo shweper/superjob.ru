@@ -868,6 +868,7 @@ while number_goroda < len(goroda_arr):
 
 n = 0
 while n < 150:
+  try:
     sheet = wb[lst[2]]
     sheet.title
     login = (sheet.cell(row=1, column=2).value)
@@ -996,7 +997,8 @@ while n < 150:
 
     #Заполняем города
     #ля теста iter_gorod
-    iter_gorod = random.randint(0, max_number)
+    iter_gorod = random.randint(1, len(goroda_arr))
+    print(len(goroda_arr))
     try:
         browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[4]/div/div[1]/div/div/div[2]/ul/li[1]/span/span[2]/button').click()
     except:
@@ -1006,6 +1008,7 @@ while n < 150:
     random_adres = random.randint(1, kolichestvo_adresov[iter_gorod]-1)
     print('random adres = ', random_adres)
     adr_bar.send_keys(goroda_arr[iter_gorod][0])
+    print(goroda_arr[iter_gorod][0])
 
     adr_bar = browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[4]/div/div[2]/div/div/div/div[2]/div/div[1]/div/div[1]/label/div/div/input')
     adr_bar.send_keys(goroda_arr[iter_gorod][random_adres])
@@ -1018,14 +1021,23 @@ while n < 150:
         browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[5]/div/div/div/button/span/span/span').click()
         time.sleep(2)
         list_metro = browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[2]')
-        spisoc_metro = list_metro.find_elements_by_tag_name('span')
-        print(spisoc_metro)
-        col_metro = len(spisoc_metro) - 1
-        print(col_metro)
-        metro = random.randint(0, col_metro)
-        spisoc_metro[metro].click()
-        time.sleep(1)
-        browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[3]/div/button').click()
+        spisoc_metro = list_metro.find_elements_by_class_name('_2s93E')
+
+        metro = len(spisoc_metro) - 1
+        array_metro = list(range(0, metro))
+        random.shuffle(array_metro)
+        iter_metro = 0
+        while iter_metro < 10 + iter_metro < metro:
+            iter_iter_metro = array_metro[iter_metro]
+            try:
+                spisoc_metro[iter_iter_metro].click()
+                time.sleep(1)
+                iter_metro += 1
+            except:
+                time.sleep(1)
+                iter_metro+=1
+
+        browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[3]/div/button/span/span/span').click()
     except:
         print('в городе нет метро')
     ############## Информация о компании ###################################
@@ -1057,8 +1069,11 @@ while n < 150:
     time.sleep(1)
     browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[6]/div/div[2]/div/div[1]/div/div[1]/button/span/span/span').click()
     time.sleep(1)
+    print('опубликовано')
     browser.quit()
     n+=1
-
+  except:
+      browser.quit()
+      n+=1
 
 #browser.quit()
