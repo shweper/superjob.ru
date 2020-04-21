@@ -1064,7 +1064,11 @@ while n < 150:
     else:
         print("Оставляем название компании ткаим какое оно есть")
 
-
+    #####Убераем бонус
+    try:
+        browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[5]/div/div[1]/div/div[1]/div/label/div/div[1]/span').click()
+    except:
+        print('бонуса нет')
     ############## Размещаем вакансию и закрываем браузер ##################
     time.sleep(1)
     browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[6]/div/div[2]/div/div[1]/div/div[1]/button/span/span/span').click()
