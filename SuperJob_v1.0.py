@@ -797,6 +797,7 @@ sfera_deyatel = (sheet.cell(row=i, column=17).value)
 opis_deyatel = (sheet.cell(row=i, column=18).value)
 name_company = (sheet.cell(row=i, column=19).value)
 opis_deyatel_rename_company = (sheet.cell(row=i, column=20).value)
+auto_podbor_rezume = (sheet.cell(row=1, column=20).value)
 
 # print(vacancy)
 error_string = 1099
@@ -1065,10 +1066,11 @@ while n < 150:
         print("Оставляем название компании ткаим какое оно есть")
 
     #####Убераем бонус
-    try:
-        browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[5]/div/div[1]/div/div[1]/div/label/div/div[1]/span').click()
-    except:
-        print('бонуса нет')
+    if auto_podbor_rezume == None:
+        try:
+            browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[5]/div/div[1]/div/div[1]/div/label/div/div[1]/span').click()
+        except:
+            print('бонуса нет')
     ############## Размещаем вакансию и закрываем браузер ##################
     time.sleep(1)
     browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[6]/div/div[2]/div/div[1]/div/div[1]/button/span/span/span').click()
