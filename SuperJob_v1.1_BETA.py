@@ -925,25 +925,80 @@ while n < 150:
 
     while iter_companys < 5:
         if iter_companys != 0:
-            browser.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[2]/div/div[2]/div/div/div/button').click()
+            browser.find_element_by_xpath(
+                '/html/body/div[3]/div/div[1]/div[4]/div/div/div/div/div/form/div/div[1]/div/div/div[2]/div/div[2]/div/div/div/button').click()
         # Тыкаем на специализацию!
-        if opis_companys[iter_companys] == "Начало карьеры, мало опыта":
-            specializacii = browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[1]/div/label/div/div/input').send_keys('Начало карьеры')
+        if opis_companys[iter_companys] == "СМИ, издательства":
+            if companys[iter_companys] == "Радио":
+                specializacii = browser.find_element_by_xpath(
+                    '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[1]/div/label/div/div/input').send_keys(
+                    opis_companys[iter_companys])
+                browser.find_element_by_xpath(
+                    '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[2]/div[1]/div[2]/div/div/div/label/div/div[2]/span').click()
+        elif opis_companys[iter_companys] == "Топ-персонал":
+            if companys[iter_companys] == "Страхование":
+                specializacii = browser.find_element_by_xpath(
+                    '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[1]/div/label/div/div/input').send_keys(
+                    opis_companys[iter_companys])
+                browser.find_element_by_xpath(
+                    '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div/label/div/div[2]/span').click()
+
+        elif opis_companys[iter_companys] == "Транспорт, логистика, ВЭД":
+            if companys[iter_companys] == "Трубопроводы":
+                specializacii = browser.find_element_by_xpath(
+                    '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[1]/div/label/div/div/input').send_keys(
+                    opis_companys[iter_companys])
+                browser.find_element_by_xpath(
+                    '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[2]/div[1]/div[2]/div/div/div/label/div/div[2]/span').click()
+        elif opis_companys[iter_companys] == "Строительство, проектирование, недвижимость":
+            if companys[iter_companys] == "Трубопроводы":
+                specializacii = browser.find_element_by_xpath(
+                    '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[1]/div/label/div/div/input').send_keys(
+                    opis_companys[iter_companys])
+                browser.find_element_by_xpath(
+                    '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div/label/div/div[2]/span').click()
+
+        elif opis_companys[iter_companys] == "Юриспруденция":
+            if companys[iter_companys] == "Урегулирование убытков":
+                specializacii = browser.find_element_by_xpath(
+                    '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[2]/div[1]/div[2]/div/div/div/label/div/div[2]/span').send_keys(
+                    opis_companys[iter_companys])
+                browser.find_element_by_xpath(
+                    '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[2]/div[1]/div[2]/div/div/div/label/div/div[2]/span').click()
+
+        elif opis_companys[iter_companys] == "Страхование":
+            if companys[iter_companys] == "Урегулирование убытков":
+                specializacii = browser.find_element_by_xpath(
+                    '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[1]/div/label/div/div/input').send_keys(
+                    opis_companys[iter_companys])
+                browser.find_element_by_xpath(
+                    '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div/label/div/div[2]/span').click()
+        elif opis_companys[iter_companys] == "Начало карьеры, мало опыта":
+            specializacii = browser.find_element_by_xpath(
+                '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[1]/div/label/div/div/input').send_keys(
+                'Начало карьеры')
+            oblast = browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div')
+            specializacii = oblast.find_elements_by_class_name('_2s93E')
+            n_spec = xpath_specializacii.get(companys[iter_companys])
+            specializacii[int(n_spec)].click()
+        elif opis_companys[iter_companys] == "Другое":
+            specializacii = browser.find_element_by_xpath(
+                '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[1]/div/label/div/div/input').send_keys(
+                opis_companys[iter_companys])
             oblast = browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div')
             specializacii = oblast.find_elements_by_class_name('_2s93E')
             n_spec = xpath_specializacii.get(companys[iter_companys])
             specializacii[int(n_spec)].click()
         else:
-            if opis_companys[iter_companys] == "Другое":
-                specializacii = browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[1]/div/label/div/div/input').send_keys(
-                    opis_companys[iter_companys])
-                oblast = browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div')
-                specializacii = oblast.find_elements_by_class_name('_2s93E')
-                n_spec = xpath_specializacii.get(companys[iter_companys])
-                specializacii[int(n_spec)].click()
-            else:
-                specializacii = browser.find_element_by_xpath('/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[1]/div/label/div/div/input').send_keys(opis_companys[iter_companys])
-                browser.find_element_by_xpath( '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/label/div/div[1]/span').click()
+            specializacii = browser.find_element_by_xpath(
+                '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[1]/div/label/div/div/input').send_keys(
+                opis_companys[iter_companys])
+            browser.find_element_by_xpath(
+                '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/label/div/div[1]/span').click()
+        time.sleep(2)
+        browser.find_element_by_xpath(
+            '/html/body/div[3]/div/div[5]/div[2]/div/div[2]/div/div/div[3]/div/div/div[1]/button/span/span/span').click()
+        time.sleep(1)
 
         iter_companys += 1
 
